@@ -2,25 +2,20 @@
 console.log("task-2")
 
 
- const i = []
+function calcAverageCalories(days) {
 
-function makeArray(firstArray, secondArray, maxLength) {
+   if (days.length === 0) {
+      return 0;
+   }
 
- for (const element of firstArray ) {
-    i.push(element)
- }
+   let totalCalories = 0
 
- for (const element of secondArray ) {
-    i.push(element)
- }
+   for (const item of days) {
+      totalCalories += item.calories
+   }
 
- if (i.length > maxLength) {
-
-    return i.slice(0,maxLength)
-
- } else {
-
-    return i
-
- }
+   return totalCalories / days.length
+      
 }
+
+
